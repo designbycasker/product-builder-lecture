@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark light" />
+  <title>로또 번호 추천기</title>
+  <link rel="stylesheet" href="lotto.css" />
+</head>
+<body>
+<div class="app">
+
+  <button class="theme-toggle" id="themeToggle" aria-label="테마 전환"></button>
+
+  <div class="inner">
+    <header>
+      <h1>🎱 로또 번호 추천기</h1>
+      <p class="subtitle">행운의 번호를 뽑아드립니다 · 로또 6/45</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2 class="card-label">이번 주 추천 번호</h2>
+        <div class="balls" id="mainBalls" role="list" aria-label="추천 번호"></div>
+        <div class="btn-group">
+          <button class="btn-main" id="btnDraw">✨ 번호 뽑기</button>
+          <button class="btn-sec"  id="btnMulti">5게임 추천</button>
+        </div>
+        <p class="tip">
+          번호는 <strong>완전 무작위</strong>로 생성됩니다.<br />
+          재미와 흥미를 위한 서비스입니다 🍀
+        </p>
+      </section>
+
+      <section class="card" id="multiCard" hidden>
+        <h2 class="card-label">5게임 추천 번호</h2>
+        <div id="multiRows"></div>
+      </section>
+
+      <section class="card" id="statsCard" hidden>
+        <h2 class="card-label">이번 추천 분석</h2>
+        <div class="stats" id="statsGrid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <ul class="legend" aria-label="번호 색상 범례">
+        <li class="legend-item"><span class="legend-dot dot-1"></span>1~9</li>
+        <li class="legend-item"><span class="legend-dot dot-10"></span>10~19</li>
+        <li class="legend-item"><span class="legend-dot dot-20"></span>20~29</li>
+        <li class="legend-item"><span class="legend-dot dot-30"></span>30~39</li>
+        <li class="legend-item"><span class="legend-dot dot-40"></span>40~45</li>
+      </ul>
+    </footer>
+  </div>
+</div>
+
+<script src="lotto.js"></script>
+</body>
+</html>
